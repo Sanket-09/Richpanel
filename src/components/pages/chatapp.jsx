@@ -16,7 +16,7 @@ function ChatApp() {
       .catch((error) => console.error('Error fetching messages:', error))
 
     // Setup Socket.io
-    const socket = io('http://localhost:5000')
+    const socket = io('https://richpanel-backend1-8zql.onrender.com')
 
     socket.on('receiveMessage', (message) => {
       setMessages((prevMessages) => [...prevMessages, message])
@@ -56,7 +56,7 @@ function ChatApp() {
     })
       .then((response) => response.json())
       .then((newMessage) => {
-        const socket = io('http://localhost:5000')
+        const socket = io('https://richpanel-backend1-8zql.onrender.com')
         socket.emit('sendMessage', newMessage)
         setMessages([...messages, { ...newMessage, isAcknowledged: false }])
         setUserMessage('')

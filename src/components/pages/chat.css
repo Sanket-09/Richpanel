@@ -59,7 +59,7 @@ body {
   padding: 1.55rem;
   overflow-y: auto;
   background-color: #f6f6f6;
-  background-image: url('path-to-whatsapp-pattern.png');
+  /* background-image: url('path-to-whatsapp-pattern.png'); */
 }
 
 .chat-window h4 {
