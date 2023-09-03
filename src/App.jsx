@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Chat from './components/pages/chat' // Import the Chat component
 import './App.css'
 import LoginPage from './components/pages/LoginPage'
@@ -39,14 +39,12 @@ export default function App() {
 
   return (
     <Router>
-      <Routes>
-        <Route exact path='/' component={LoginPage} />
-        <Route path='/register' component={RegisterPage} />
-        <Route path='/dashBoard' component={FacebookPageIntegrationDashboard} />
-        <Route path='/forget-password' component={ForgetPasswordPage} />
-        <Route path='/home' component={HomePage} />
-        <Route path='/chat' component={Chat} /> // New route for chat
-      </Routes>
+      <Route exact path='/' component={LoginPage} />
+      <Route path='/register' component={RegisterPage} />
+      <Route path='/dashBoard' component={FacebookPageIntegrationDashboard} />
+      <Route path='/forget-password' component={ForgetPasswordPage} />
+      <Route path='/home' component={HomePage} />
+      <Route path='/chat' component={Chat} />
     </Router>
   )
 }
