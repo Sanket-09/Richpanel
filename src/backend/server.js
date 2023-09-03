@@ -14,7 +14,7 @@ const session = require('express-session')
 require('dotenv').config()
 
 const app = express()
-const PORT = 'process.env.PORT || 5000'
+const PORT = process.env.PORT || 5000
 const VERIFY_TOKEN = 'VeR1fyT0k3n$ecur3P@ssw0rd'
 const LAST_FETCHED_FILE = './LAST_FETCHED_FILE.json'
 

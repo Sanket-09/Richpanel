@@ -76,7 +76,7 @@ function Chat() {
   const [selectedUser, setSelectedUser] = useState(null)
 
   useEffect(() => {
-    fetch('https://richpanel-backend1-8zql.onrender.com')
+    fetch('https://richpanel-backend1-8zql.onrender.com/api/messages')
       .then((response) => response.json())
       .then((data) => setMessages(data))
       .catch((error) => console.error('Error fetching messages:', error))
