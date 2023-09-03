@@ -1,0 +1,190 @@
+/* chat.css */
+/* root {
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 2rem;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #2d2b2b;
+  color: black;
+}
+
+.chat-container {
+  display: flex;
+  height: 100vh;
+  margin-top: -2rem;
+  margin-bottom: -2rem;
+  width: 99.5vw;
+  margin-left: -8vw;
+}
+
+.users {
+  width: 30rem;
+  border-right: 1px solid #3f3434;
+  overflow-y: auto;
+  background-color: #f6f6f6;
+  padding: 10px;
+}
+
+.users h4 {
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user:hover {
+  background-color: #aca5a5;
+}
+
+.selected-user {
+  background-color: #aca5a5;
+}
+
+.chat-window {
+  height: 100vh;
+  width: 70vw; /* 70% of the viewport width. Adjust as needed. */
+  padding: 1.55rem;
+  overflow-y: auto;
+  background-color: #f6f6f6;
+  background-image: url('path-to-whatsapp-pattern.png');
+}
+
+.chat-window h4 {
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.message {
+  height: 50px; /* Set a fixed height. Adjust as needed. */
+  overflow: hidden; /* Hides overflow content, adjust as needed. */
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 60%;
+}
+
+.message p {
+  margin: 0;
+}
+
+.message:after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: inherit;
+}
+
+.sender {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+  color: #333;
+}
+
+.sender:after {
+  right: -5px;
+  bottom: 0;
+  clip-path: polygon(100% 0%, 0% 0%, 100% 100%);
+}
+
+.receiver {
+  width: 40%;
+  align-self: flex-start;
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.receiver:after {
+  left: -5px;
+  bottom: 0;
+  clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+/* ... Your existing styles ... */
+
+/* Chat Input Styles */
+.chat-input-container {
+  padding: 10px;
+  border-top: 1px solid #eee;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+}
+
+.chat-input {
+  flex: 0.05;
+  border-radius: 4px;
+  outline: none;
+}
+
+.inputbox {
+  flex: 2; /* This determines how the input box grows relative to other flex items */
+  padding: 10px 0; /* Add some vertical padding to increase the height */
+}
+
+.inputbox input {
+  background-color: #ffffff;
+  width: 80%; /* Make sure the input fills the entire container */
+  padding: 18px;
+  /* Add some padding for the input */
+  /* Add a border for clarity */
+  border-radius: 10px; /* Add a rounded border */
+}
+
+.send-button {
+  margin-left: 10px;
+  padding-left: 22px;
+  background-color: #34b7f1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #289acf;
+}
+
+/* Adjust the height of the chat window to make room for the input bar */
+.chat-window {
+  height: calc(
+    100% - 50px
+  ); /* 50px is approximately the height of the input bar */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  align-items: start;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.toolbar {
+  background-color: #004e96;
+  width: 6rem;
+  /* margin-left: -8rem; */
+}
