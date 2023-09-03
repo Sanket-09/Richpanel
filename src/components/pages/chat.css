@@ -146,6 +146,7 @@ body {
 
 .inputbox input {
   background-color: #ffffff;
+  color: black;
   width: 80%; /* Make sure the input fills the entire container */
   padding: 18px;
   /* Add some padding for the input */
