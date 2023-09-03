@@ -69,8 +69,8 @@ body {
 }
 
 .message {
-  height: 50px; /* Set a fixed height. Adjust as needed. */
-  overflow: hidden; /* Hides overflow content, adjust as needed. */
+  height: 50px;
+  overflow: hidden;
   margin-bottom: 10px;
   padding: 8px 12px;
   border-radius: 8px;
@@ -122,9 +122,6 @@ body {
   display: table;
 }
 
-/* ... Your existing styles ... */
-
-/* Chat Input Styles */
 .chat-input-container {
   padding: 10px;
   border-top: 1px solid #eee;
@@ -140,18 +137,17 @@ body {
 }
 
 .inputbox {
-  flex: 2; /* This determines how the input box grows relative to other flex items */
-  padding: 10px 0; /* Add some vertical padding to increase the height */
+  flex: 2;
+  padding: 10px 0;
 }
 
 .inputbox input {
   background-color: #ffffff;
   color: black;
-  width: 80%; /* Make sure the input fills the entire container */
+  width: 80%;
   padding: 18px;
-  /* Add some padding for the input */
-  /* Add a border for clarity */
-  border-radius: 10px; /* Add a rounded border */
+
+  border-radius: 10px;
 }
 
 .send-button {
@@ -168,11 +164,8 @@ body {
   background-color: #289acf;
 }
 
-/* Adjust the height of the chat window to make room for the input bar */
 .chat-window {
-  height: calc(
-    100% - 50px
-  ); /* 50px is approximately the height of the input bar */
+  height: calc(100% - 50px);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -187,5 +180,4 @@ body {
 .toolbar {
   background-color: #004e96;
   width: 6rem;
-  /* margin-left: -8rem; */
 }

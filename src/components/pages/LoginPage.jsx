@@ -8,7 +8,7 @@ export default function SignInPage() {
   const history = useHistory()
 
   function goToChat() {
-    history.push('/chat') // Assuming '/chat' is the route for your chat page.
+    history.push('/chat') 
   }
 
   return (
@@ -50,7 +50,7 @@ export default function SignInPage() {
             New to MyApp? <Link to='/register'>Sign Up</Link>
           </p>
 
-          {/* Here's your new button */}
+          {}
         </footer>
       </div>
     </div>

@@ -10,7 +10,7 @@ import FacebookPageIntegrationDashboard from './components/pages/DashBoard'
 
 export default function App() {
   useEffect(() => {
-    // Initialize the Facebook SDK
+  
     try {
       window.fbAsyncInit = function () {
         window.FB.init({
