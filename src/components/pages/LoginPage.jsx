@@ -14,15 +14,18 @@ export default function SignInPage() {
   return (
     <div className='text-center m-auto'>
       <div className='login-card'>
-        <h2>Sign in</h2>
+        <h2 style={{ color: 'white' }}>Sign in</h2>
         <form action='/home'>
           <p>
-            <label style={{ padding: '0 9px' }}>Email</label>
+            <label style={{ padding: '0 9px', color: 'white' }}>Email</label>
             <br />
             <input type='text' name='email' required />
           </p>
           <p>
-            <label style={{ padding: '0 9px' }}> Password</label>
+            <label style={{ padding: '0 9px', color: 'white' }}>
+              {' '}
+              Password
+            </label>
             <br />
             <input type='password' name='password' required />
           </p>
@@ -42,13 +45,11 @@ export default function SignInPage() {
             onReject={(error) => {
               console.log(error)
             }}
-          >
-            <FacebookLoginButton />
-          </LoginSocialFacebook>
-          <p>
+          ></LoginSocialFacebook>
+          <p style={{ color: 'white' }}>
             New to MyApp? <Link to='/register'>Sign Up</Link>
           </p>
-          <button onClick={goToChat}>Go to Chat</button>{' '}
+
           {/* Here's your new button */}
         </footer>
       </div>
