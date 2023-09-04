@@ -14,7 +14,7 @@ const session = require('express-session')
 require('dotenv').config()
 
 const app = express()
-const PORT = 'https://richpanel-backend1-8zql.onrender.com'
+const PORT = 'http://localhost:5000/api/messages'
 const VERIFY_TOKEN = 'VeR1fyT0k3n$ecur3P@ssw0rd'
 const LAST_FETCHED_FILE = './LAST_FETCHED_FILE.json'
 
@@ -48,7 +48,7 @@ passport.use(
     {
       clientID: 618455903770825,
       clientSecret: '3b6b2f2321484679fe53723712b13ce7',
-      callbackURL: 'http://richpanel-backend1-8zql.onrender.com/api/messages',
+      callbackURL: 'http://localhost:5000/api/messages',
     },
     function (accessToken, refreshToken, profile, done) {
       return done(null, profile)
