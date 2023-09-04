@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import io from 'socket.io-client' 
+import io from 'socket.io-client'
 import './chat.css'
 
 let socket
@@ -76,7 +76,7 @@ function Chat() {
   const [selectedUser, setSelectedUser] = useState(null)
 
   useEffect(() => {
-    fetch('https://richpanel-backend1-8zql.onrender.com/api/messages')
+    fetch('http://localhost:5000/api/messages')
       .then((response) => response.json())
       .then((data) => setMessages(data))
       .catch((error) => console.error('Error fetching messages:', error))
