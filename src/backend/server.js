@@ -14,7 +14,7 @@ const session = require('express-session')
 require('dotenv').config()
 
 const app = express()
-const PORT = 'http://localhost:5000'
+const PORT = process.env.PORT || 5000
 const VERIFY_TOKEN = 'VeR1fyT0k3n$ecur3P@ssw0rd'
 const LAST_FETCHED_FILE = './LAST_FETCHED_FILE.json'
 
@@ -48,7 +48,7 @@ passport.use(
     {
       clientID: 618455903770825,
       clientSecret: '3b6b2f2321484679fe53723712b13ce7',
-      callbackURL: 'http://localhost:5000',
+      callbackURL: 'http://localhost:5000/auth/facebook/callback',
     },
     function (accessToken, refreshToken, profile, done) {
       return done(null, profile)
@@ -93,7 +93,7 @@ async function initializeDatabase() {
 }
 
 const PAGE_ACCESS_TOKEN =
-  'EAAIye3x0GMkBO9s6WEGa0US3WRZBDU7h7P9K7XdCEPr2pZBBDiZBUBY3oaYRoAqbemQMDjfYd2yy3pWXL4MjMOYSqhsibhhQ2iDWc4eIEylzuhcOoqI1ZAlgJorLd8gGmfPj5pMzpIpKRZA6m6bKi8iLZBv6ZAmGPLC4ZC9ehiWnbDEkgWyYFfUg8j6JXYBzZBakZD'
+  'EAAIye3x0GMkBO1iqJ1P6L8eYsZChKQlNbHF6K3ZBhfqd9ssfGIqpHblnMv2eqDD4EKjYRai9lpYlyG5NnsBimqAA2ji2cQHpkNZCUfskwrryWfMvc0ZB1zuM2qHWZCV0Eyv6n8cwcpXqwRfbAzXWlXbOGKDvB7NxTpeq782CSTgQsZBZCQRFqyYLwtckepN6OUZD'
 const PAGE_ID = '116628254867580'
 
 async function fetchConversations() {
